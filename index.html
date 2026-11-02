@@ -1,107 +1,93 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#DFF3D9"><meta name="description" content="EcoQuest — Fun learning, Real action.">
-<title>EcoQuest</title>
-<style>
-:root{--bg:#DFF3D9;--green:#16865A;--dark:#174B38;--mint:#F5FBF1;--line:#D7E7D1;--muted:#668071;--white:#fff;--shadow:0 8px 28px #174b3812}
-*{box-sizing:border-box}body{margin:0;background:#edf5ea;color:#193d2e;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer;border:0}.app{max-width:440px;min-height:100vh;margin:auto;background:var(--mint);position:relative;box-shadow:0 0 35px #173e2810;padding-bottom:84px}.top{padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between;background:var(--bg)}.brand{font-weight:850;font-size:20px;color:var(--dark);letter-spacing:-.5px}.brand span{color:var(--green)}.iconbtn{background:#ffffffb8;border:1px solid #d1e5ce;border-radius:13px;width:40px;height:40px;color:var(--dark);font-size:18px}.content{padding:18px 18px 30px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}.h1{font-size:27px;line-height:1.15;margin:7px 0 8px;color:var(--dark);letter-spacing:-.8px}.muted{color:var(--muted);font-size:14px;line-height:1.55}.card{background:white;border:1px solid var(--line);border-radius:20px;padding:17px;margin:13px 0;box-shadow:var(--shadow)}.hero{background:linear-gradient(135deg,#e3f5db,#c9e8c8);border-radius:24px;padding:23px 20px;margin:12px 0 18px}.hero .h1{font-size:29px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;background:var(--green);color:white;padding:13px 17px;border-radius:14px;font-weight:750;width:100%;margin-top:10px}.btn.secondary{background:#eaf5e5;color:var(--dark);border:1px solid var(--line)}.btn.light{background:white;color:var(--green);border:1px solid var(--line)}.btn.small{width:auto;padding:9px 12px;font-size:13px;margin:4px 4px 0 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.tile{background:white;border:1px solid var(--line);border-radius:18px;padding:15px;min-height:110px;text-align:left;color:var(--dark)}.tile .emoji{font-size:25px;display:block;margin-bottom:9px}.tile b{font-size:14px}.tile small{display:block;color:var(--muted);margin-top:4px}.sectiontitle{font-size:17px;font-weight:800;margin:22px 0 9px;color:var(--dark)}.field{margin:13px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}.field input,.field textarea{width:100%;border:1px solid var(--line);background:white;border-radius:12px;padding:13px;color:var(--dark);outline:none}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--green)}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(440px,100%);background:white;border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:9px 5px calc(9px + env(safe-area-inset-bottom));z-index:5}.nav button{background:none;color:#789083;font-size:11px;font-weight:700;padding:5px 8px}.nav button.active{color:var(--green)}.nav span{display:block;font-size:19px;margin-bottom:2px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.pill{display:inline-block;background:#eaf5e5;color:var(--green);border-radius:99px;padding:6px 10px;font-size:12px;font-weight:800}.progress{height:8px;background:#e6eee2;border-radius:20px;overflow:hidden;margin:12px 0}.progress div{height:100%;background:var(--green);width:0}.option{display:block;width:100%;text-align:left;background:white;border:1px solid var(--line);padding:14px;border-radius:13px;margin:9px 0;color:var(--dark)}.option.selected{border:2px solid var(--green);background:#eff9eb}.option.correct{border:2px solid #2d9b65;background:#eaf8ef}.option.wrong{border:2px solid #d48b62;background:#fff3ed}.video{width:100%;aspect-ratio:9/16;background:#17251e;border-radius:18px;object-fit:contain;max-height:510px}.reel-actions{display:flex;gap:9px;margin:10px 0}.reel-actions button{background:#eaf5e5;color:var(--dark);padding:10px 13px;border-radius:12px;font-weight:700}.hidden{display:none!important}.notice{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}.auth{padding:35px 22px}.auth .brand{font-size:27px}.material{padding:15px;background:white;border:1px solid var(--line);border-radius:16px;margin:10px 0}.material h3{margin:0 0 7px;color:var(--dark);font-size:16px}.material p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.score{font-size:46px;font-weight:900;color:var(--green);text-align:center;margin:10px}.photo-preview{width:100%;max-height:260px;object-fit:contain;border-radius:13px;margin-top:10px;background:#f1f5ef}.toast{position:fixed;bottom:94px;left:50%;transform:translateX(-50%);background:#193d2e;color:white;padding:11px 16px;border-radius:12px;font-size:13px;z-index:10;display:none;max-width:90%;text-align:center}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoQuest Reels</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #F4F8F0;
+      color: #234B36;
+    }
+
+    header {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #DCE9D1;
+      font-size: 20px;
+      font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    main {
+      height: calc(100vh - 60px);
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+    }
+
+    .reel {
+      min-height: calc(100vh - 60px);
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      scroll-snap-align: start;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      max-width: 390px;
+      height: calc(100vh - 100px);
+      object-fit: cover;
+      border-radius: 18px;
+      background: #DCE9D1;
+    }
+  </style>
 </head>
+
 <body>
-<div class="app" id="app">
-  <div id="auth" class="auth">
-    <div class="brand">🍃 Eco<span>Quest</span></div><p class="muted">Fun learning, Real action.</p>
-    <div class="hero"><div class="eyebrow">Welcome to EcoQuest</div><div class="h1">Small actions.<br>Greener future.</div><p class="muted">Learn about the planet, take a quiz, and turn knowledge into real action.</p></div>
-    <div id="loginBox">
-      <div class="h1">Sign In</div>
-      <div class="field"><label>Email</label><input id="loginEmail" type="email" placeholder="you@example.com"></div>
-      <div class="field"><label>Password</label><input id="loginPass" type="password" placeholder="Enter password"></div>
-      <button class="btn" onclick="signIn()">Sign In</button>
-      <button class="btn secondary" onclick="showSignup()">Create an account</button>
-    </div>
-    <div id="signupBox" class="hidden">
-      <div class="h1">Create Account</div>
-      <div class="field"><label>Nickname</label><input id="newNick" placeholder="Your nickname"></div>
-      <div class="field"><label>Email</label><input id="newEmail" type="email" placeholder="you@example.com"></div>
-      <div class="field"><label>Password</label><input id="newPass" type="password" placeholder="At least 4 characters"></div>
-      <button class="btn" onclick="signUp()">Create Account</button><button class="btn secondary" onclick="showLogin()">Back to Sign In</button>
-    </div>
-    <p class="notice">Demo version: account details are saved only in this browser on this device. Do not use a real or reused password.</p>
-  </div>
-  <div id="main" class="hidden">
-    <header class="top"><div class="brand">🍃 Eco<span>Quest</span></div><button class="iconbtn" onclick="go('settings')" aria-label="Settings">☰</button></header>
-    <main class="content" id="page"></main>
-    <nav class="nav">
-      <button data-nav="home" onclick="go('home')"><span>⌂</span>Home</button>
-      <button data-nav="reels" onclick="go('reels')"><span>▣</span>Reels</button>
-      <button data-nav="materials" onclick="go('materials')"><span>▤</span>Learn</button>
-      <button data-nav="quiz" onclick="startQuiz()"><span>✎</span>Quiz</button>
-      <button data-nav="profile" onclick="go('profile')"><span>☺</span>Profile</button>
-    </nav>
-  </div>
-</div>
-<div class="toast" id="toast"></div>
-<script>
-const $=id=>document.getElementById(id);
-const get=(k,d)=>{try{return JSON.parse(localStorage.getItem('eq_'+k))??d}catch{return d}};
-const set=(k,v)=>localStorage.setItem('eq_'+k,JSON.stringify(v));
-let user=get('user',null),page='home',qIndex=0,answers=[],lastResult=null,reelIndex=1;
-const questions=[
- {q:'Which action helps save electricity at home?',a:['Leave lights on','Turn off lights when not needed','Keep the TV running'],c:1,why:'Turning off unused lights reduces electricity use.'},
- {q:'Which transport option is better for a short, safe trip?',a:['Walk or cycle','Use a private car alone','Ask for a ride for every trip'],c:0,why:'Walking and cycling create no direct exhaust emissions.'},
- {q:'What should you do with a clean plastic bottle?',a:['Throw it into a river','Burn it','Put it in the correct recycling bin'],c:2,why:'Sorting recyclable plastic helps it enter the recycling process.'}
-];
-function toast(t){let e=$('toast');e.textContent=t;e.style.display='block';clearTimeout(window._toast);window._toast=setTimeout(()=>e.style.display='none',2400)}
-function showSignup(){$('loginBox').classList.add('hidden');$('signupBox').classList.remove('hidden')}
-function showLogin(){$('signupBox').classList.add('hidden');$('loginBox').classList.remove('hidden')}
-function signUp(){let n=$('newNick').value.trim(),e=$('newEmail').value.trim().toLowerCase(),p=$('newPass').value;if(!n||!e||p.length<4)return toast('Fill in all fields. Password must be at least 4 characters.');let accounts=get('accounts',{});if(accounts[e])return toast('This email is already registered in this browser.');accounts[e]={nickname:n,password:p};set('accounts',accounts);user={email:e,nickname:n};set('user',user);set('points',0);set('history',[]);enter()}
-function signIn(){let e=$('loginEmail').value.trim().toLowerCase(),p=$('loginPass').value,acc=get('accounts',{});if(!acc[e]||acc[e].password!==p)return toast('Email or password not found. Create a demo account first.');user={email:e,nickname:acc[e].nickname};set('user',user);enter()}
-function enter(){$('auth').classList.add('hidden');$('main').classList.remove('hidden');go('home')}
-function signOutDemo(){user=null;set('user',null);$('main').classList.add('hidden');$('auth').classList.remove('hidden');showLogin()}
-function go(p){page=p;render()}
-function activeNav(){document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.nav===page))}
-function render(){if(!user){$('main').classList.add('hidden');$('auth').classList.remove('hidden');return}activeNav();let p=$('page');let pts=get('points',0);
-if(page==='home')p.innerHTML=`<div class="eyebrow">Welcome back</div><div class="h1">Hello, ${esc(user.nickname)}! 🌱</div><p class="muted">Ready to make a positive impact today?</p><div class="hero"><div class="eyebrow">Your EcoQuest journey</div><div class="h1">Fun learning,<br>Real action.</div><p class="muted">Discover simple ways to care for our planet.</p><button class="btn" onclick="go('materials')">Start EcoQuest →</button></div><div class="grid"><button class="tile" onclick="go('reels')"><span class="emoji">🎬</span><b>Eco Reels</b><small>Watch short videos</small></button><button class="tile" onclick="go('materials')"><span class="emoji">📚</span><b>Learning Materials</b><small>Explore topics</small></button><button class="tile" onclick="startQuiz()"><span class="emoji">📝</span><b>Take a Quiz</b><small>Test your knowledge</small></button><button class="tile" onclick="go('action')"><span class="emoji">🌿</span><b>Real Action</b><small>Complete a mission</small></button></div><div class="card row"><div><b>🌟 Eco Points</b><div class="muted">Your earned points</div></div><div class="h1" style="margin:0">${pts} EP</div></div><div class="sectiontitle">Your learning progress</div><button class="btn secondary" onclick="go('history')">View Quiz History</button>`;
-else if(page==='materials')p.innerHTML=`<div class="eyebrow">Explore & learn</div><div class="h1">Learning Materials</div><p class="muted">Choose a topic to learn something useful.</p><div class="material"><h3>⚡ Energy, Climate & Sustainable Living</h3><p>Learn how energy use and everyday choices affect the environment.</p><button class="btn small" onclick="openMaterial(0)">Read material</button></div><div class="material"><h3>🚲 Sustainable Transportation</h3><p>Explore walking, cycling, public transport, and cleaner journeys.</p><button class="btn small" onclick="openMaterial(1)">Read material</button></div><div class="material"><h3>♻️ Reducing Single-Use Plastic Waste</h3><p>Understand why reducing disposable plastic matters.</p><button class="btn small" onclick="openMaterial(2)">Read material</button></div><div class="material"><h3>🗂️ Proper Plastic Waste Management</h3><p>Learn to reduce, reuse, sort, and recycle plastic correctly.</p><button class="btn small" onclick="openMaterial(3)">Read material</button></div>`;
-else if(page==='materialDetail')p.innerHTML=materialDetail();
-else if(page==='reels')p.innerHTML=`<div class="eyebrow">Watch & discover</div><div class="h1">Eco Reels</div><p class="muted">Short videos about caring for our planet.</p><div class="row"><span class="pill">Video ${reelIndex} of 3</span><span class="muted">EcoQuest</span></div><video class="video" controls playsinline preload="metadata"><source src="./video${reelIndex}.mp4" type="video/mp4">Your browser does not support video.</video><div class="reel-actions"><button onclick="likeReel()">♡ Like <span id="likes">${get('likes',{})[reelIndex]||0}</span></button><button onclick="commentReel()">💬 Comment</button><button onclick="shareReel()">↗ Share</button></div><div class="row"><button class="btn secondary" onclick="changeReel(-1)" ${reelIndex===1?'disabled':''}>← Previous</button><button class="btn" onclick="changeReel(1)" ${reelIndex===3?'disabled':''}>Next →</button></div><p class="notice">If a video does not play, check that video${reelIndex}.mp4 exists in the same GitHub folder as index.html.</p>`;
-else if(page==='quiz')p.innerHTML=quizView();
-else if(page==='result')p.innerHTML=resultView();
-else if(page==='history'){let h=get('history',[]);p.innerHTML=`<div class="eyebrow">Your progress</div><div class="h1">Quiz History</div><div class="card"><b>Total Eco Points</b><div class="h1">${pts} EP</div></div>${h.length?h.slice().reverse().map(x=>`<div class="material row"><div><b>${x.score}/3 correct</b><p class="muted">${new Date(x.date).toLocaleDateString()}</p></div><span class="pill">+${x.reward} EP</span></div>`).join(''):'<p class="muted">You have no completed quizzes yet.</p>'}<button class="btn secondary" onclick="go('home')">Back to Home</button>`}
-else if(page==='action')p.innerHTML=`<div class="eyebrow">Take action</div><div class="h1">Real Action Mission</div><div class="card"><div style="font-size:30px">🚶‍♀️🚲🚌</div><h3>Choose Greener Transportation</h3><p class="muted">For a short journey, choose public transport, cycling, or walking when the route is safe and suitable.</p><p class="muted">Take a photo as proof of your eco-friendly action. Ask permission before photographing other people.</p><div class="field"><label>Upload photo proof</label><input id="proof" type="file" accept="image/*" onchange="previewPhoto(event)"><img id="preview" class="photo-preview hidden"></div><button class="btn" onclick="submitMission()">Submit Mission</button><p class="notice">Demo: the photo is kept only in this browser session and is not uploaded to an online server.</p></div><button class="btn secondary" onclick="go('home')">Back to Home</button>`;
-else if(page==='profile')p.innerHTML=`<div class="eyebrow">Your account</div><div class="h1">Profile</div><div class="card"><div style="font-size:36px">👤</div><h2>${esc(user.nickname)}</h2><p class="muted">${esc(user.email)}</p><span class="pill">${pts} Eco Points</span></div><button class="btn" onclick="go('edit')">Edit Profile</button><button class="btn secondary" onclick="go('settings')">Settings</button>`;
-else if(page==='edit')p.innerHTML=`<div class="h1">Edit Profile</div><div class="field"><label>Nickname</label><input id="editNick" value="${attr(user.nickname)}"></div><div class="field"><label>Email</label><input value="${attr(user.email)}" disabled></div><button class="btn" onclick="saveProfile()">Save Changes</button><button class="btn secondary" onclick="go('profile')">Cancel</button>`;
-else if(page==='settings')p.innerHTML=`<div class="h1">Settings</div><button class="tile" style="width:100%;margin:6px 0" onclick="go('edit')">👤 Edit Profile</button><button class="tile" style="width:100%;margin:6px 0" onclick="go('password')">🔒 Change Password</button><button class="tile" style="width:100%;margin:6px 0" onclick="go('about')">🍃 About EcoQuest</button><button class="btn secondary" onclick="go('home')">Back to Home</button><p class="notice">Sign out is omitted from the Settings menu in this demo.</p>`;
-else if(page==='password')p.innerHTML=`<div class="h1">Change Password</div><div class="field"><label>Current Password</label><input id="oldPass" type="password"></div><div class="field"><label>New Password</label><input id="freshPass" type="password"></div><button class="btn" onclick="changePassword()">Save Password</button><button class="btn secondary" onclick="go('settings')">Cancel</button>`;
-else if(page==='about')p.innerHTML=`<div class="h1">🍃 About EcoQuest</div><div class="hero"><div class="h1">Fun learning,<br>Real action.</div><p class="muted">EcoQuest is an environmental learning web app that encourages students to understand environmental issues and practice simple sustainable actions.</p></div><div class="material"><h3>Our purpose</h3><p>Make environmental education engaging through short videos, learning materials, quizzes, and real-life missions.</p></div><div class="material"><h3>Our features</h3><p>Eco Reels · Learning Materials · Quiz · Eco Points · Real Action Mission</p></div><button class="btn secondary" onclick="go('settings')">Back to Settings</button>`;
-p.insertAdjacentHTML('beforeend',page!=='quiz'&&page!=='result'?'':'');}
-function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function attr(s){return esc(s).replace(/`/g,'')}
-const materialTexts=[
-['Energy, Climate & Sustainable Living','Energy is used for lighting, cooling, cooking, and transport. Saving energy can reduce pollution from energy production. Try turning off unused lights, unplugging chargers when safe, using daylight, and choosing reusable items. Sustainable living means making thoughtful choices that reduce waste and protect natural resources.'],
-['Sustainable Transportation','Transportation can create air pollution and greenhouse gas emissions. For short trips, walking or cycling can be good choices when safe. Public transport can reduce the number of individual vehicles on the road. Plan journeys, follow traffic rules, and choose the safest practical option.'],
-['Reducing Single-Use Plastic Waste','Single-use plastics are designed to be used briefly and then discarded. Reduce waste by carrying a reusable bottle or bag, refusing unnecessary disposable items, and choosing products with less packaging. Small repeated habits can help reduce litter and pressure on waste systems.'],
-['Proper Plastic Waste Management','Keep plastic waste out of drains, rivers, and open spaces. Separate clean recyclable items according to local recycling rules. Reuse suitable containers when safe, and put non-recyclable waste in the correct bin. Recycling works best when materials are sorted properly and are clean enough for collection.']
-];
-function openMaterial(i){set('mat',i);page='materialDetail';render()}
-function materialDetail(){let m=materialTexts[get('mat',0)];return `<div class="eyebrow">Learning material</div><div class="h1">${m[0]}</div><div class="card"><p class="muted" style="font-size:15px">${m[1]}</p></div><button class="btn" onclick="startQuiz()">Take the Quiz →</button><button class="btn secondary" onclick="go('materials')">Back to Materials</button>`}
-function startQuiz(){qIndex=0;answers=[];page='quiz';render()}
-function quizView(){let q=questions[qIndex],picked=answers[qIndex];return `<div class="row"><span class="eyebrow">EcoQuest Quiz</span><span class="pill">${qIndex+1}/3</span></div><div class="progress"><div style="width:${(qIndex+1)/3*100}%"></div></div><div class="h1">Question ${qIndex+1}</div><p style="font-size:18px;font-weight:750;line-height:1.4">${q.q}</p>${q.a.map((a,i)=>`<button class="option ${picked===i?'selected':''}" onclick="pick(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join('')}<button class="btn" onclick="nextQuestion()" ${picked===undefined?'disabled style="opacity:.45"':''}>${qIndex===2?'Finish Quiz':'Next'}</button><button class="btn secondary" onclick="go('home')">Exit Quiz</button>`}
-function pick(i){answers[qIndex]=i;render()}
-function nextQuestion(){if(answers[qIndex]===undefined)return;if(qIndex<2){qIndex++;render()}else finishQuiz()}
-function finishQuiz(){let score=questions.filter((q,i)=>answers[i]===q.c).length,h=get('history',[]),reward=0;let already=h.some(x=>x.quizId==='ecoquest-basic-v1');if(!already)reward=10;let entry={quizId:'ecoquest-basic-v1',score,reward,date:Date.now(),answers:answers.slice()};h.push(entry);set('history',h);set('points',get('points',0)+reward);lastResult=entry;page='result';render()}
-function resultView(){let r=lastResult||get('history',[]).slice(-1)[0];if(!r)return '<div class="h1">No result yet</div>';return `<div class="eyebrow" style="text-align:center">Quiz completed</div><div class="h1" style="text-align:center">Great effort! 🌱</div><div class="score">${r.score}/3</div><p class="muted" style="text-align:center">${r.score===3?'Excellent work!':r.score===2?'Good job! Keep learning.':'Good try! Review the answers and try again.'}</p><div class="card row"><span>Correct answers</span><b>${r.score}</b></div><div class="card row"><span>Incorrect answers</span><b>${3-r.score}</b></div><div class="card row"><span>Eco Points earned</span><b>+${r.reward} EP</b></div><div class="notice">${r.reward===0?'You have already received the reward for this quiz. Retaking it will not grant additional points.':'You earned 10 Eco Points for your first completion of this quiz.'}</div><div class="sectiontitle">Review answers</div>${questions.map((q,i)=>`<div class="material"><b>${i+1}. ${q.q}</b><p class="muted">Your answer: ${q.a[r.answers[i]]||'Not answered'}</p><p class="muted">Correct answer: ${q.a[q.c]}</p><p class="muted">${q.why}</p></div>`).join('')}<button class="btn" onclick="go('home')">Back to Home</button><button class="btn secondary" onclick="startQuiz()">Retake Quiz</button><button class="btn light" onclick="go('history')">Quiz History</button>`}
-function saveProfile(){let n=$('editNick').value.trim();if(!n)return toast('Nickname cannot be empty.');user.nickname=n;set('user',user);let a=get('accounts',{});if(a[user.email]){a[user.email].nickname=n;set('accounts',a)}toast('Profile updated');go('profile')}
-function changePassword(){let a=get('accounts',{}),acc=a[user.email];if(!acc||acc.password!==$('oldPass').value)return toast('Current password is incorrect.');let p=$('freshPass').value;if(p.length<4)return toast('New password must be at least 4 characters.');acc.password=p;a[user.email]=acc;set('accounts',a);toast('Password changed in this browser');go('settings')}
-function likeReel(){let l=get('likes',{});l[reelIndex]=(l[reelIndex]||0)+1;set('likes',l);$('likes').textContent=l[reelIndex]}
-function commentReel(){let c=prompt('Write a comment (demo only):');if(c&&c.trim())toast('Comment saved for this demo session.')}
-function shareReel(){if(navigator.share)navigator.share({title:'EcoQuest Reels',url:location.href}).catch(()=>{});else if(navigator.clipboard)navigator.clipboard.writeText(location.href).then(()=>toast('Link copied'));else toast('Copy this page address to share.')}
-function changeReel(d){reelIndex=Math.max(1,Math.min(3,reelIndex+d));render()}
-let proofUrl=null;
-function previewPhoto(e){let f=e.target.files[0];if(!f)return;if(f.size>4*1024*1024){toast('Please choose a photo under 4 MB.');e.target.value='';return}let r=new FileReader();r.onload=()=>{proofUrl=r.result;$('preview').src=proofUrl;$('preview').classList.remove('hidden')};r.readAsDataURL(f)}
-function submitMission(){if(!proofUrl)return toast('Please choose a photo first.');set('missionDone',true);toast('Mission submitted in this demo!');setTimeout(()=>go('home'),900)}
-if(user)enter();else showLogin();
-</script>
-</body></html>
+
+  <header>EcoQuest Reels</header>
+
+  <main>
+
+    <section class="reel">
+      <video controls playsinline preload="metadata">
+        <source src="./videos/video1.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <section class="reel">
+      <video controls playsinline preload="metadata">
+        <source src="./videos/video2.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <section class="reel">
+      <video controls playsinline preload="metadata">
+        <source src="./videos/video3.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </section>
+
+  </main>
+
+</body>
+</html>
+```
